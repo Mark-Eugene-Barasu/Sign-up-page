@@ -1,0 +1,25 @@
+{
+  "name": "newsletter-signup",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A simple newsletter Signup page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mark-Eugene-Barasu/Sign-up-page.git"
+  },
+  "author": "Eugene Mark Korku Barasu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mark-Eugene-Barasu/Sign-up-page/issues"
+  },
+  "homepage": "https://github.com/Mark-Eugene-Barasu/Sign-up-page#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "request": "^2.88.2"
+  }
+}
