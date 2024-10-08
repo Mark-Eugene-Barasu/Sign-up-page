@@ -2,7 +2,7 @@
 
 import express from "express";
 import bodyParser from "body-parser";
-// import require from "require";
+import require from "request";
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
