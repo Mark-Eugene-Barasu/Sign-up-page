@@ -10,23 +10,38 @@ body {
 }
 
 .form-signin {
+    text-align: center;
     width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    font-weight: 400;
 }
 
-.form-signin .form-floating:focus-within {
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
   z-index: 2;
 }
 
-.form-signin input[type="email"] {
+.form-signin input[type="text"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin input[type="password"] {
+.exception {
+    margin-bottom: -1px;
+    border-radius: 0;  /* to make the middle box(Last Name section to have sharp border corners)*/
+}
+
+.form-signin input[type="email"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
