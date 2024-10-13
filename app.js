@@ -17,14 +17,26 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 
 const app = express();
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get("/", function (req, res) {
-    // res.write(`Works like magic \n`)
-    // res.write(`${__dirname}\\public\\signup.html`);
-    // res.send();
-
     res.sendFile(`${__dirname}/public/signup.html`);
 });
+
+app.post("/", function (req, res) {
+
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const emailAddress = req.body.email;
+
+    console.log(`User first name: ${firstName}`);
+    console.log(`User last name: ${lastName}`);
+    console.log(`User email address: ${emailAddress}`);
+    res.send(`
+        <h1>Welcome, ${firstName} ${lastName},</h1>
+        <p>You will get frequent updates from out NewsLetter via your email: <a href='mailto:${emailAddress}'>${emailAddress} </a>\nThank you.
+        </p>`);    
+})
 
 
 
