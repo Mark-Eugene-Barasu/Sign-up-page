@@ -1,7 +1,6 @@
 html,
 body {
     display: -ms-flexbox;
-    display: flex;
     -ms-flex-align: center ;
     align-items: center;
     padding-top: 40px;
@@ -10,7 +9,8 @@ body {
 }
 
 .form-signin {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 330px;
     padding: 15px;
@@ -27,22 +27,22 @@ body {
 }
 
 .form-signin .form-control:focus {
-  z-index: 2;
+    z-index: 2;
 }
 
-.form-signin input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+.top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.exception {
+.middle {
     margin-bottom: -1px;
     border-radius: 0;  /* to make the middle box(Last Name section to have sharp border corners)*/
 }
 
-.form-signin input[type="email"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.bottom {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
