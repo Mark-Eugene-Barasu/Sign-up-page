@@ -19,10 +19,11 @@ const app = express();
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-    res.write(`Works like magic \n`)
-    // res.sendFile(`${__dirname}/signup.html`);
-    res.write(`${__dirname}\\public\\signup.html`);
-    res.send();
+    // res.write(`Works like magic \n`)
+    // res.write(`${__dirname}\\public\\signup.html`);
+    // res.send();
+
+    res.sendFile(`${__dirname}/public/signup.html`);
 });
 
 
