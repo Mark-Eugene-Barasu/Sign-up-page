@@ -19,13 +19,18 @@ const app = express();
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-    res.sendFile(`${__dirname}/public/signup.html`);
+    res.write(`Works like magic \n`)
+    // res.sendFile(`${__dirname}/signup.html`);
+    res.write(`${__dirname}\\public\\signup.html`);
+    res.send();
 });
+
+
 
 app.listen(3000, function(){
     console.log(`Server running on port: 3000`)
-    console.log(`${__filename}`);
-    console.log(`${__dirname}`); 
+    // console.log(`${__filename}`);
+    // console.log(`${__dirname}`); 
 })
 
 
