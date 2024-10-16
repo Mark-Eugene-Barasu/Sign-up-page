@@ -1,7 +1,7 @@
 // jshint ESversion:6
 
 // internal modules
-import { api } from "./api.js";
+import { api } from "./api";
 import { listID } from "./api";
 
 
