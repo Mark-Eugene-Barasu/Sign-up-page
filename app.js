@@ -1,5 +1,11 @@
 // jshint ESversion:6
 
+// internal modules
+import { api } from "./api.js";
+import { listID } from "./api";
+
+
+//npm packages
 import express from "express";
 import bodyParser from "body-parser";
 import request from "request";
@@ -56,11 +62,12 @@ app.post("/", function (req, res) {
     // Now, to we need to turn this object above into flat pack JSON
     const jsonData = JSON.stringify(data);
 
-    const url = `https://us9.api.mailchimp.com/3.0/lists/0d790ef5f0`;
+    const url = `https://us9.api.mailchimp.com/3.0/lists/${listID}/members`; // updated
 
     const options = {
         method : `POST`,
-        auth: `EugeneMarkKorkuBarasu:63b3dac34f04996a93f7a790b67ed7fc-us9`
+        auth: `EugeneMarkKorku:${api}`
+
     }
 
     // create our HTTPS request
@@ -82,53 +89,5 @@ app.listen(3000, function(){
     // console.log(`${__filename}`);
     // console.log(`${__dirname}`); 
 });
-
-// API 
-// 63b3dac34f04996a93f7a790b67ed7fc-us9
-
-// List ID
-// 0d790ef5f0
-
-
-// Initialization Code.
-// MailchimpSDK.initialize(token: 63b3dac34f04996a93f7a790b67ed7fc-us9)
-// var contact: Contact = Contact(emailAddress: "Insert Email Here")
-// MailchimpSDK.createOrUpdate(contact: contact) { result in
-//     switch result {
-//     case .success:
-//         print("Successfully added or updated contact")
-//     case .failure(let error):
-//         print("Error: \(error.localizedDescription)")
-//     }
-// }
-
-
-
-/* Merge Field
---------------------
-Merge Tag: FNAME
-Name: First Name
-Type: text (string)
---------------------
-Merge Tag: LNAME
-Name: Last Name
-Type: text (string)
---------------------
-Merge Tag: ADDRESS
-Name: Address
-Type: address
---------------------
-Merge Tag: PHONE
-Name: Phone Number
-Type: phone (string)
---------------------
-Merge Tag: BIRTHDAY
-Name: Birthday
-Type: birthday (string)
---------------------
-Merge Tag: COMPANY
-Name: Company
-Type: text (string)
-*/
 
 // Everything works successfully
