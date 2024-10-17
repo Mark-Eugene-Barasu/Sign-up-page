@@ -1,7 +1,7 @@
 // jshint ESversion:6
 
 // internal modules
-import { api } from "./api";
+import { api } from "./api"; // to access api key and listID you'll find it in api.js on my local repository
 import { listID } from "./api";
 
 
